@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tip Calculator</title>
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="css/responsive.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <script defer src="js/app.js"></script>
+  </head>
+  <body>
+
+    <img class="logo" src="assets/logo.svg" alt="" srcset="">
+    
+    <div class="container">
+      <div class="data-input">
+        <div class="data-input__bill">
+          <div class="data-input__div-title">Bill</div>
+          <input type="number" class="data-input__input" id="bill" onkeypress='return numberValidation(event)'/>
+          <img class="data-input__icon" src="assets/icon-dollar.svg" alt="">
+        </div>
+
+        <div class="data-input__tip">
+          <div class="data-input__div-title" id="div-title">Select Tip %</div>
+          <div class="data-input__grid">
+            <button onclick="calculate(0.05)" class="data-input__button">
+              5%
+            </button>
+            <button onclick="calculate(0.10)" class="data-input__button">
+              10%
+            </button>
+            <button onclick="calculate(0.15)" class="data-input__button">
+              15%
+            </button>
+            <button onclick="calculate(0.25)" class="data-input__button">
+              25%
+            </button>
+            <button onclick="calculate(0.50)" class="data-input__button">
+              50%
+            </button>
+            <input type="number" onchange="calculate((this.value) / 100)" onkeypress='return numberValidation(event)' class="data-input__custom" id="custom-input" placeholder="Custom">
+            </input>
+          </div>
+        </div>
+
+        <div class="data-input__people">
+          <div class="data-input__div-title">Number of People</div>
+          <span class="data-input__span" id="error-span">Can't be zero</span>
+          <input
+            type="number"
+            class="data-input__input"
+            value="1"
+            min="1"
+            id="numberPeople"
+            onkeypress='return validaNumericos(event)'
+          />
+          <img class="data-output__icon" src="assets/icon-person.svg" alt="">
+        </div>
+      </div>
+
+      <div class="data-output">
+        <div class="totals">
+          <div class="amount">
+            <div class="data-output__amount">
+              Tip Amount
+              <span class="data-output__span">/ person</span>
+            </div>
+            <div class="data-output__total-amount" id="tip-amount">$0.00</div>
+          </div>
+
+          <div class="total">
+            <div class="data-output__amount">
+              Total
+              <span class="data-output__span">/ person</span>
+            </div>
+            <div class="data-output__total-amount" id="total">$0.00</div>
+          </div>
+        </div>
+        <button onclick="reset()" class="data-output__button">Reset</button>
+      </div>
+    </div>
+  </body>
+</html>

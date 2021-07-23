@@ -1,0 +1,224 @@
+/* GENERAL STYLES */
+
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap');
+
+:root {
+    /* VARIABLES */
+    /* Primary Colors */
+    --strong-cyan       : hsl(172, 67%, 45%);
+    /* Neutral Colors */
+    --very-dark-cyan    : hsl(183, 100%, 15%);
+    --dark-grayish-cyan : hsl(186, 14%, 43%);
+    --light-grayish-cyan1: hsl(185, 41%, 84%);
+    --light-grayish-cyan2: hsl(189, 41%, 97%);
+    --white             : hsl(0, 0%, 100%);
+
+}
+
+body {
+    font-family: 'Space Mono', monospace;
+    background-color: #D0F2F2;
+}
+
+input, button {
+    font-size: 24px;
+    font-weight: 700;
+    font-family: 'Space Mono', monospace;
+    border: none;
+
+}
+
+input:focus {
+    outline: none;
+}
+
+/* Hide Input Number Arrows */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+
+.logo {
+    display: block;
+    margin: 1em auto;
+    width: 150px;
+}
+
+.data-input__icon, .data-output__icon {
+    position:relative;
+    width: 20px;
+    left: 1.5em;
+    bottom: 2.7em;
+    pointer-events: none;
+}
+
+.container {
+    display: flex;
+    margin: 2em auto;
+    width: 1000px;
+    height: 500px;
+    padding: 3em;
+    gap: 1em;
+    border-radius: 1.5em;
+    background-color: #fff;
+}
+
+.data-input {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 50%;
+    height: 100%;
+}
+
+.data-input__input {
+    padding: 0.4em;
+    width: 100%;
+    text-align: end;
+    color:#1e4f53;
+    background-color: var(--light-grayish-cyan2);
+}
+
+.data-input__input:focus {
+    border-style: inset;
+    border: 2px solid var(--strong-cyan);
+}
+
+.data-input__bill, .data-input__people {
+    margin: 0 auto;
+    width: 80%;
+}
+
+.data-input__div-title {
+    font-weight: 700;
+    color: var(--dark-grayish-cyan)
+}
+
+.data-input__span {
+    display: none;
+    float: right;
+    color: red
+}
+
+.error-span {
+    display: block;
+}
+
+.error-input {
+    border-style: inset;
+    border: 2px solid red
+}
+
+
+.data-input__tip {
+    margin: 0 auto;
+    width: 80%;
+}
+
+.data-input__grid {
+    display: flex;
+    margin-top: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1em;
+}
+
+.data-input__button {
+    width: 110px;
+    padding: 0.4em;
+    text-align: center;
+    color: var(--white);
+    border-radius: 10px;
+    background-color: var(--very-dark-cyan);
+}
+
+
+.data-input__button:hover {
+    background-color: var(--strong-cyan);
+    color: var(--very-dark-cyan);
+    cursor: pointer;
+    
+}
+
+.data-input__custom {
+    width: 94px;
+    padding: 0.4em;
+    text-align: center;
+    color: var(--white);
+    border-radius: 10px;
+    color:#1e4f53;
+    background-color: var(--light-grayish-cyan2);
+}
+
+.data-input__custom:focus {
+    border-style: inset;
+    border: 2px solid var(--strong-cyan);
+}
+
+
+.data-output {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 50%;
+    height: 100%;
+    background-color: var(--very-dark-cyan);
+    border-radius: 1.5em;
+}
+
+.totals {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 5em;
+}
+
+.amount, .total {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+
+.data-output__span {
+    display: block;
+    color: var(--dark-grayish-cyan)
+}
+
+.data-output__amount {
+    color: var(--white);
+}
+
+.data-output__total-amount {
+    font-size: 3em;
+    font-weight: 700;
+    color: var(--strong-cyan)
+}
+
+.totals, .data-output__button {
+    margin: 0 auto;
+    width: 80%;
+}
+
+.data-output__button {
+    padding: 0.4em;
+    border-radius: 6px;
+    text-transform: uppercase;
+    background-color: var(--strong-cyan);
+    color: #1e4f53;
+}
+.data-output__button:hover {
+    background-color: rgb(59, 255, 229);
+    cursor: pointer;
+}
+.data-output__button:active {
+    background-color: rgb(59, 255, 229);
+}
+
+
