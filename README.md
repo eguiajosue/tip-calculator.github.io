@@ -2,7 +2,7 @@
 # 💻 tip-calculator.github.io
 
 # Tip Calculator
-This is the first challenge finished of Front-End Mentory
+This is the first challenge finished of Front-End Mentor
 
 ```javascript
 const Proyect = {
