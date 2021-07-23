@@ -1,7 +1,15 @@
 
 # 💻 tip-calculator.github.io
 
-# Challenge No.1 on Front-End Mentory
+# Tip Calculator
+This is the first challenge finished of Front-End Mentory
+
+```javascript
+const Proyect = {
+  tecnologies   : ['HTML', 'CSS', 'JavaScript'],
+  methodologies : ['Bem']
+}'
+```
 
 ## ❔ How to use?
 1. Enter the bill amount
