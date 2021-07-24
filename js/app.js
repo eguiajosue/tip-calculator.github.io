@@ -20,8 +20,6 @@ let calculate = (percent) => {
     document.getElementById('numberPeople').classList.add('animate__animated');
     document.getElementById('numberPeople').classList.add('animate__shakeX');
   }
-
-  console.log(percent)
 };
 
 
